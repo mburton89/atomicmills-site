@@ -19,13 +19,8 @@
       padding: 20px;
     }
     .logo {
-      width: 200px;
+      width: 300px; /* increased size */
       margin-bottom: 20px;
-    }
-    h1 {
-      font-size: 2.5rem;
-      color: darkred;
-      margin-bottom: 10px;
     }
     p {
       font-size: 1.2rem;
@@ -36,27 +31,8 @@
       margin-bottom: 20px;
       color: darkred;
     }
-    .coming-soon {
-      display: block;
-      margin: 10px auto;
-      padding: 10px 20px;
-      background: darkred;
-      color: #fffbe6;
-      font-weight: bold;
-      border-radius: 4px;
-      text-decoration: none;
-      width: fit-content;
-    }
     form {
       margin-top: 20px;
-    }
-    input[type="email"] {
-      padding: 10px;
-      width: calc(100% - 22px);
-      margin-bottom: 10px;
-      border: 1px solid #ccc;
-      border-radius: 4px;
-      font-family: monospace;
     }
     input[type="submit"] {
       padding: 10px 20px;
@@ -67,22 +43,14 @@
       cursor: pointer;
       font-family: monospace;
     }
-    a {
-      color: darkred;
-      text-decoration: underline;
-      font-family: monospace;
-    }
   </style>
 </head>
 <body>
   <div class="container">
-    <img src="bearplane.png" alt="Bearplane" class="logo" />
-    <h1>Bearplane</h1>
+    <img src="images/bearplane.png" alt="Bearplane" class="logo" />
     <p>Prepare for takeoff! Bearplane is soaring in soon. Stay tuned for gravity-defying adventures and atomic-powered flight.</p>
     <div id="countdown">Loading countdown...</div>
-    <a href="#" class="coming-soon">Coming Soon</a>
     <form action="https://forms.gle/XyuGtzkVzJ7X9KDJA" target="_blank">
-      <input type="email" name="email" placeholder="Enter your email to get updates" required />
       <input type="submit" value="Notify Me" />
     </form>
   </div>
