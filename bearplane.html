@@ -2,78 +2,128 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Atomic Mills &mdash; Bearplane Coming Soon</title>
+  <title>Bearplane | Atomic Mills</title>
   <style>
     body {
-      margin: 0;
-      padding: 40px;
       background: #fffbe6;
       font-family: monospace;
       text-align: center;
-      color: #333;
+      padding: 40px;
+      margin: 0;
     }
-    .container {
-      max-width: 600px;
-      margin: 0 auto;
-      padding: 20px;
-    }
-    .logo {
-      width: 300px; /* increased size */
-      margin-bottom: 20px;
-    }
-    p {
-      font-size: 1.2rem;
-      margin: 0 0 20px;
-    }
-    #countdown {
-      font-size: 1.5rem;
-      margin-bottom: 20px;
+
+    h1, h2 {
       color: darkred;
     }
-    form {
-      margin-top: 20px;
+
+    .logo {
+      max-width: 300px;
+      margin-bottom: 20px;
     }
-    input[type="submit"] {
-      padding: 10px 20px;
-      background: darkred;
-      color: #fffbe6;
-      border: none;
-      border-radius: 4px;
-      cursor: pointer;
-      font-family: monospace;
+
+    .section {
+      max-width: 800px;
+      margin: 40px auto;
+      text-align: left;
+    }
+
+    .section h2 {
+      border-bottom: 2px solid darkred;
+      padding-bottom: 5px;
+    }
+
+    .gif {
+      width: 100%;
+      max-width: 600px;
+      display: block;
+      margin: 20px auto;
+    }
+
+    .faq {
+      background: #fdf7db;
+      padding: 20px;
+      border: 1px solid #e6d9a8;
+      margin-top: 40px;
+    }
+
+    .faq h3 {
+      color: darkred;
+    }
+
+    .faq-item {
+      margin-bottom: 20px;
+    }
+
+    .faq-item p {
+      margin: 5px 0;
+    }
+
+    a {
+      color: darkred;
+      text-decoration: underline;
+      font-weight: bold;
     }
   </style>
 </head>
 <body>
-  <div class="container">
-    <img src="images/bearplane.png" alt="Bearplane" class="logo" />
-    <p>Prepare for takeoff! Bearplane is soaring in soon. Stay tuned for gravity-defying adventures and atomic-powered flight.</p>
-    <div id="countdown">Loading countdown...</div>
-    <form action="https://forms.gle/XyuGtzkVzJ7X9KDJA" target="_blank">
-      <input type="submit" value="Notify Me" />
-    </form>
+
+  <img src="atomic-mills-logo-5.png" alt="Atomic Mills Logo" class="logo">
+
+  <h1>Bearplane</h1>
+  <p><strong>Take to the skies as a rocket-powered bear in Bearplane</strong>&mdash;a whimsical, action-packed adventure inspired by the legendary tale of Wojtek. Battle dastardly foes with outrageous abilities, explosive power-ups, and a whole lot of midair mayhem.</p>
+
+  <div class="section">
+    <h2>Ram! Roast! Roar! Victory awaits!</h2>
+    <img src="gif1-gameplay.gif" alt="Gameplay GIF" class="gif">
+    <p>Rain down righteous justice from above! Ram enemy aircraft into scrap metal, roast bad guys mid-flight with blazing jet flames, or belt out a sky-shaking roar that ejects foes straight from their cockpits. The skies won’t know what hit ’em.</p>
   </div>
-  <script>
-    // Countdown Timer to June 3
-    const countdownEl = document.getElementById('countdown');
-    const targetDate = new Date('June 17, 2025 00:00:00').getTime();
-    function updateCountdown() {
-      const now = new Date().getTime();
-      const distance = targetDate - now;
-      if (distance < 0) {
-        countdownEl.textContent = 'Bearplane has launched!';
-        clearInterval(interval);
-        return;
-      }
-      const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-      const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-      const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-      const seconds = Math.floor((distance % (1000 * 60)) / 1000);
-      countdownEl.textContent = `${days}d ${hours}h ${minutes}m ${seconds}s until launch`;
-    }
-    const interval = setInterval(updateCountdown, 1000);
-    updateCountdown();
-  </script>
+
+  <div class="section">
+    <h2>Suit up, power up, and look sharp!</h2>
+    <img src="gif2-loadout.gif" alt="Loadout GIF" class="gif">
+    <p>Every hero needs an arsenal... and flair! Equip bazookas, jousting lances, and other wild weapons of sky-bound destruction. Then top it off with a tactical hat built for glory. Some hats boost your weapons, others give you an edge in specific weather. The right combo turns you into a flying fortress!</p>
+  </div>
+
+  <div class="section">
+    <h2>From the makers of the world’s first atomic breakfast</h2>
+    <img src="gif3-atomicmills.gif" alt="Atomic Mills GIF" class="gif">
+    <p>Gobble Flappy Flakes, chug Nukey Nectar, and pop open a bottle of Honey Thunder Cola. These top-secret nutritional breakthroughs give you blistering speed, flapping flight, and brute strength. Side effects may include total domination.</p>
+  </div>
+
+  <div class="section">
+    <h2>Co-op chaos</h2>
+    <img src="gif4-coop.gif" alt="Co-op GIF" class="gif">
+    <p>Grab a controller and enlist a co-pilot! Player 2 joins as Rifle Rat, your gun-toting sidekick. Join forces, double your firepower, and deliver freedom&mdash;one explosion at a time.</p>
+  </div>
+
+  <div class="section faq">
+    <h2>FAQ</h2>
+
+    <div class="faq-item">
+      <h3>Is Bearplane available on Steam?</h3>
+      <p>Yes! Bearplane is available now on Steam for a one-time purchase of $4.99.</p>
+    </div>
+
+    <div class="faq-item">
+      <h3>Is it free on mobile?</h3>
+      <p>The mobile version is free to start, with an optional one-time upgrade to unlock the full game and all its features.</p>
+    </div>
+
+    <div class="faq-item">
+      <h3>What does the full game unlock include?</h3>
+      <p>Special hats with unique powers, double mission rewards, leaderboard access, mission skipping, bonus cartoon blood, and the ability to play as Rocket Rat with a controller.</p>
+    </div>
+
+    <div class="faq-item">
+      <h3>Is there co-op on mobile?</h3>
+      <p>Yes! Just plug in a controller and player 2 can join as Rifle Rat anytime.</p>
+    </div>
+
+    <div class="faq-item">
+      <h3>Does the game support localization?</h3>
+      <p>Yes, Bearplane supports 13+ languages, including French, Spanish, Japanese, and more.</p>
+    </div>
+  </div>
+
 </body>
 </html>
