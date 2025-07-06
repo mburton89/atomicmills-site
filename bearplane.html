@@ -3,67 +3,80 @@
 <head>
   <meta charset="UTF-8">
   <title>Bearplane | Atomic Mills</title>
-  <style>
+ <style>
+  body {
+    background: #fffbe6;
+    font-family: monospace;
+    text-align: center;
+    padding: 40px;
+    margin: 0;
+    font-size: 16px; /* Base size for mobile */
+  }
+
+  @media (min-width: 768px) {
     body {
-      background: #fffbe6;
-      font-family: monospace;
-      text-align: center;
-      padding: 40px;
-      margin: 0;
+      font-size: 18px; /* Tablet and small desktop */
     }
+  }
 
-    h1, h2 {
-      color: darkred;
+  @media (min-width: 1024px) {
+    body {
+      font-size: 20px; /* Large desktop */
     }
+  }
 
-    .logo {
-      max-width: 300px;
-      margin-bottom: 20px;
-    }
+  h1, h2 {
+    color: darkred;
+  }
 
-    .section {
-      max-width: 800px;
-      margin: 40px auto;
-      text-align: left;
-    }
+  .logo {
+    max-width: 300px;
+    margin-bottom: 20px;
+  }
 
-    .section h2 {
-      border-bottom: 2px solid darkred;
-      padding-bottom: 5px;
-    }
+  .section {
+    max-width: 800px;
+    margin: 40px auto;
+    text-align: left;
+  }
 
-    .gif {
-      width: 100%;
-      max-width: 800px;
-      display: block;
-      margin: 20px auto;
-    }
+  .section h2 {
+    border-bottom: 2px solid darkred;
+    padding-bottom: 5px;
+  }
 
-    .faq {
-      background: #fdf7db;
-      padding: 20px;
-      border: 1px solid #e6d9a8;
-      margin-top: 40px;
-    }
+  .gif {
+    width: 100%;
+    max-width: 800px;
+    display: block;
+    margin: 20px auto;
+  }
 
-    .faq h3 {
-      color: darkred;
-    }
+  .faq {
+    background: #fdf7db;
+    padding: 20px;
+    border: 1px solid #e6d9a8;
+    margin-top: 40px;
+  }
 
-    .faq-item {
-      margin-bottom: 20px;
-    }
+  .faq h3 {
+    color: darkred;
+  }
 
-    .faq-item p {
-      margin: 5px 0;
-    }
+  .faq-item {
+    margin-bottom: 20px;
+  }
 
-    a {
-      color: darkred;
-      text-decoration: underline;
-      font-weight: bold;
-    }
-  </style>
+  .faq-item p {
+    margin: 5px 0;
+  }
+
+  a {
+    color: darkred;
+    text-decoration: underline;
+    font-weight: bold;
+  }
+</style>
 </head>
 <body>
 
