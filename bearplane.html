@@ -122,17 +122,19 @@
     justify-content: center;
     background-color: darkred;
     color: white;
-    padding: 15px 40px; /* Shorter & wider */
+    padding: 15px 40px;
     font-weight: bold;
     font-size: 1.4em;
     text-decoration: none;
     border-radius: 8px;
-    transition: background-color 0.2s ease;
-    gap: 10px; /* Space between icon and text */
+    transition: background-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+    gap: 10px;
   }
 
   .btn:hover {
     background-color: #a00;
+    transform: scale(1.05);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
   }
   
   .store-buttons {
