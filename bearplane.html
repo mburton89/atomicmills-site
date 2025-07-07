@@ -137,21 +137,19 @@
     justify-content: center;
     gap: 10px;
     margin-top: 20px;
-    /* Removed flex-wrap to prevent wrapping */
-    overflow-x: auto; /* Optional: allows horizontal scroll if needed instead of breaking layout */
+    flex-wrap: wrap;
   }
   
   .store-buttons img {
-    height: 78px;
-    max-width: 264px;
+    height: 76px;
+    max-width: 262px;
     object-fit: contain;
-    transition: filter 0.2s ease, box-shadow 0.2s ease;
-    border-radius: 4px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
   }
-  
+
   .store-buttons img:hover {
-    filter: brightness(0.9); /* Light grey tint */
-    box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.1); /* Optional: faint outline */
+    transform: scale(1.05);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
   }
 
   .intro-paragraph {
@@ -196,8 +194,8 @@
   }
   
   .atomic-images img {
-    width: 150px;
-    height: 150px;
+    width: 120px;
+    height: 120px;
     object-fit: cover;
     border-radius: 8px;
     transition: transform 0.2s ease;
@@ -208,10 +206,10 @@
     transform: scale(1.05);
   }
    
-  @media (max-width: 800px) {
+  @media (max-width: 600px) {
     .atomic-images img {
-      width: 150px;
-      height: 150px;
+      width: 120px;
+      height: 120px;
     }
   }
 
