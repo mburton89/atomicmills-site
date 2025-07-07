@@ -105,6 +105,43 @@
     margin-top: 0;
   }
 
+  .trailer-button {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .btn {
+    display: inline-block;
+    background-color: darkred;
+    color: white;
+    padding: 10px 20px;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 6px;
+    transition: background-color 0.2s ease;
+  }
+  
+  .btn:hover {
+    background-color: #a00;
+  }
+  
+  .store-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 20px;
+    flex-wrap: wrap;
+  }
+  
+  .store-buttons img {
+    height: 40px;
+    max-width: 150px;
+    object-fit: contain;
+  }
+
+  .intro-paragraph {
+    text-align: center;
+  }
 </style>
 </head>
 <body>
@@ -112,7 +149,25 @@
   <img src="800x480-main.gif" alt="Bearplane Logo" class="section logo-top">
 
   <div class="section">
-    <p>Take to the skies as a rocket-powered bear in Bearplane&mdash;a whimsical, action-packed adventure inspired by the legendary tale of Wojtek. Battle dastardly foes with outrageous abilities, explosive power-ups, and a whole lot of midair mayhem.</p>
+    <div class="trailer-button">
+      <a href="#trailer" class="btn">Watch the Trailer</a>
+    </div>
+  
+    <p class="intro-paragraph">
+      <em><strong>Take to the skies as a rocket-powered bear in Bearplane&mdash;a whimsical, action-packed adventure inspired by the legendary tale of Wojtek. Battle dastardly foes with outrageous abilities, explosive power-ups, and a whole lot of midair mayhem.</strong></em>
+    </p>
+
+    <div class="store-buttons">
+      <a href="https://steamcommunity.com/app/3370980" target="_blank">
+        <img src="steam-badge.png" alt="Steam" />
+      </a>
+      <a href="https://apps.apple.com/app/id6456222792" target="_blank">
+        <img src="appstore-badge.png" alt="App Store" />
+      </a>
+      <a href="https://play.google.com/store/apps/details?id=com.MatthewBurton.BearPlane" target="_blank">
+        <img src="googleplay-badge.png" alt="Google Play" />
+      </a>
+    </div>
   </div>
   
   <div class="section">
