@@ -137,19 +137,21 @@
     justify-content: center;
     gap: 10px;
     margin-top: 20px;
-    flex-wrap: wrap;
+    /* Removed flex-wrap to prevent wrapping */
+    overflow-x: auto; /* Optional: allows horizontal scroll if needed instead of breaking layout */
   }
   
   .store-buttons img {
     height: 78px;
     max-width: 264px;
     object-fit: contain;
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    transition: filter 0.2s ease, box-shadow 0.2s ease;
+    border-radius: 4px;
   }
-
+  
   .store-buttons img:hover {
-    transform: scale(1.05);
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    filter: brightness(0.9); /* Light grey tint */
+    box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.1); /* Optional: faint outline */
   }
 
   .intro-paragraph {
