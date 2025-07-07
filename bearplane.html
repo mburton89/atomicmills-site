@@ -13,15 +13,17 @@
     font-size: 12px; /* Base size for mobile */
   }
 
-  @media (min-width: 768px) {
+  /* Taller than wide — mobile portrait, foldables, etc. */
+  @media (max-aspect-ratio: 1/1) {
     body {
-      font-size: 10px; /* Tablet and small desktop */
+      font-size: 11px;
     }
   }
-
-  @media (min-width: 1024px) {
+  
+  /* Wider than tall — desktop, tablets, landscape phones */
+  @media (min-aspect-ratio: 1/1) {
     body {
-      font-size: 18px; /* Large desktop */
+      font-size: 16px;
     }
   }
 
@@ -135,8 +137,8 @@
   }
   
   .store-buttons img {
-    height: 75px;
-    max-width: 260px;
+    height: 78px;
+    max-width: 264px;
     object-fit: contain;
   }
 
