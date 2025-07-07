@@ -72,6 +72,69 @@
       display: inline-block;
       margin: 0 10px;
     }
+
+    .bearplane-card {
+      display: block;
+      background: #fff7da;
+      border: 2px solid darkred;
+      border-radius: 10px;
+      text-decoration: none;
+      color: inherit;
+      margin: 30px auto;
+      max-width: 850px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      transition: box-shadow 0.2s ease;
+    }
+    
+    .bearplane-card:hover {
+      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+    }
+    
+    .bearplane-card-content {
+      display: flex;
+      align-items: center;
+      padding: 20px;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+    
+    .bearplane-image {
+      width: 300px;
+      max-width: 100%;
+      border-radius: 6px;
+    }
+    
+    .bearplane-text {
+      flex: 1;
+      min-width: 250px;
+    }
+    
+    .bearplane-text h2 {
+      color: darkred;
+      margin-top: 0;
+      font-size: 1.8em;
+    }
+    
+    .bearplane-text p {
+      font-size: 1em;
+      margin: 10px 0;
+    }
+    
+    .bearplane-tags {
+      margin-top: 10px;
+    }
+    
+    .bearplane-tags span {
+      display: inline-block;
+      background-color: #e3c59d;
+      color: #4a2e00;
+      font-weight: bold;
+      padding: 5px 10px;
+      border-radius: 5px;
+      margin-right: 8px;
+      font-size: 0.85em;
+    }
+
   </style>
 </head>
 <body>
@@ -80,6 +143,21 @@
 
   <h1>Welcome to Atomic Mills</h1>
   <p>Makers of the World’s First Atomic Breakfast</p>
+
+<a href="bearplane.html" class="bearplane-card">
+  <div class="bearplane-card-content">
+    <img src="800x480-main.gif" alt="Bearplane Preview" class="bearplane-image">
+    <div class="bearplane-text">
+      <h2>🎩 Bearplane is Here!</h2>
+      <p><strong>A rocket-powered bear. A sky full of bad guys.</strong><br>The wildest flight of the century is now available on Steam, iOS, and Android.</p>
+      <div class="bearplane-tags">
+        <span>🕹 Steam</span>
+        <span>📱 iOS</span>
+        <span>📱 Android</span>
+      </div>
+    </div>
+  </div>
+</a>
 
 <div class="section">
   <h2>About Us</h2>
