@@ -114,15 +114,18 @@
   }
   
   .btn {
-    display: inline-block;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
     background-color: darkred;
     color: white;
-    padding: 12px 32px; /* Bigger button */
+    padding: 10px 40px; /* Shorter & wider */
     font-weight: bold;
-    font-size: 1.4em;    /* Scale up text */
+    font-size: 1.2em;
     text-decoration: none;
     border-radius: 8px;
     transition: background-color 0.2s ease;
+    gap: 10px; /* Space between icon and text */
   }
 
   .btn:hover {
@@ -184,7 +187,7 @@
 
   <div class="section">
     <div class="trailer-button">
-      <a href="https://youtu.be/3JW6-kAru64" class="btn" target="_blank">Watch the Trailer</a>
+      <a href="https://youtu.be/3JW6-kAru64" class="btn" target="_blank">▶ Watch the Trailer</a>
     </div>
   
 <!--     <p class="watch-trailer-link">
