@@ -114,13 +114,14 @@
     display: inline-block;
     background-color: darkred;
     color: white;
-    padding: 10px 20px;
+    padding: 16px 32px; /* Bigger button */
     font-weight: bold;
+    font-size: 1.4em;    /* Scale up text */
     text-decoration: none;
-    border-radius: 6px;
+    border-radius: 8px;
     transition: background-color 0.2s ease;
   }
-  
+
   .btn:hover {
     background-color: #a00;
   }
@@ -143,11 +144,18 @@
     text-align: center;
   }
 
-  .hero-gif {
+  html, body {
+    margin: 0;
+    padding: 0;
     width: 100%;
-    max-width: 800px;
-    margin: 0 auto;
+    overflow-x: hidden;
+  }
+
+  .hero-gif {
+    width: 100vw;
+    max-width: none;
     display: block;
+    margin: 0;
   }
   
   @media (max-width: 768px) {
