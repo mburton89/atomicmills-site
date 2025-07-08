@@ -25,6 +25,22 @@
 
   h1, h2 { color: darkred; }
   .logo, .hero-gif { max-width: 800px; display: block; margin: auto 0; }
+
+  .hero-gif {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    display: block;
+  }
+  
+  @media (max-aspect-ratio: 50/49) {
+    .hero-gif {
+      width: 100vw;
+      max-width: none;
+      margin: 0;
+    }
+  }
+
   .section { max-width: 800px; margin: 40px auto; text-align: left; }
   .section h2 { border-bottom: 2px solid darkred; padding-bottom: 5px; }
   .gif { width: 100%; max-width: 800px; display: block; margin: 20px auto; }
