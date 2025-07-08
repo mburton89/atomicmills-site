@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <title>Bearplane | Atomic Mills</title>
+  <style>
+    body { background: #fffbe6; font-family: monospace; text-align: center; padding: 0; margin: 0; font-size: 12px; }
+    @media (max-aspect-ratio: 1/1) { body { font-size: 12px; } }
+    @media (min-aspect-ratio: 1/1) { body { font-size: 16px; } }
+    h1, h2 { color: darkred; }
+    .logo { max-width: 300px; margin-bottom: 20px; }
+
+    .hero-gif {
+      width: 100%;
+      max-width: 800px;
+      margin: 0 auto;
+      display: block;
+    }
+    
+    @media (max-aspect-ratio: 50/49) {
+      .hero-gif {
+        width: 100vw;
+        max-width: none;
+        margin: 0;
+      }
+    }
+
+    .section { max-width: 800px; margin: 40px auto; text-align: left; }
+    .section h2 { border-bottom: 2px solid darkred; padding-bottom: 5px; }
+    .gif { width: 100%; max-width: 800px; display: block; margin: 20px auto; }
+    .faq { background: #fdf7db; padding: 20px; border: 1px solid #e6d9a8; max-width: 800px; margin: 40px auto; box-sizing: border-box; }
+    .faq h3 { color: darkred; }
+    .faq-item { margin-bottom: 20px; }
+    .faq-item p { margin: 5px 0; }
+    a { color: darkred; text-decoration: underline; font-weight: bold; }
+    .trailer-button { text-align: center; margin-bottom: 20px; }
+    .btn { display: inline-flex; align-items: center; justify-content: center; background-color: darkred; color: white; padding: 15px 40px; font-weight: bold; font-size: 1.4em; text-decoration: none; border-radius: 8px; transition: background-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease; gap: 10px; }
+    .btn:hover { background-color: #a00; transform: scale(1.05); box-shadow: 0 4px 12px rgba(0,0,0,0.2); }
+    .store-buttons { display: flex; justify-content: center; gap: 10px; margin-top: 20px; flex-wrap: wrap; }
+    .store-buttons img { height: 76px; max-width: 262px; object-fit: contain; transition: transform 0.2s ease, box-shadow 0.2s ease; }
+    .store-buttons img:hover { transform: scale(1.05); box-shadow: 0 4px 12px rgba(0,0,0,0.2); }
+    .atomic-images { display: flex; justify-content: center; gap: 20px; margin-top: 10px; flex-wrap: wrap; }
+    .atomic-images img { width: 140px; height: 140px; object-fit: cover; border-radius: 8px; transition: transform 0.2s ease; cursor: pointer; }
+    .atomic-images img:hover { transform: scale(1.05); }
+    .lightbox-overlay { position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; background: rgba(0,0,0,0.85); display: none; justify-content: center; align-items: center; z-index: 9999; }
+    .lightbox-overlay img { max-width: 90%; max-height: 90%; border-radius: 8px; }
+  </style>
+</head>
+<body>
+
+  <img src="/images/main-12.gif" alt="Logo do Bearplane" class="hero-gif">
+
+  <div class="section">
+    <div class="trailer-button">
+      <a href="https://youtu.be/3JW6-kAru64" class="btn" target="_blank">▶ Assistir trailer</a>
+    </div>
+    <p class="intro-paragraph">
+      <em><strong>Voe como um urso a foguete em Bearplane: uma aventura maluca e cheia de ação, livremente inspirada na lendária história de Wojtek, o urso. Derrote inimigos traiçoeiros com habilidades insanas, lanches nucleares e muito caos aéreo.</strong></em>
+    </p>
+    <p id="coming-soon-text" style="text-align:center; font-weight:bold; font-size:1.3em; color:darkred; margin-bottom:5px;">
+      Em breve disponível em:
+    </p>
+    <div class="store-buttons">
+      <a href="https://store.steampowered.com/app/3370980" target="_blank"><img src="/steam-badge.png" alt="Steam" /></a>
+      <a href="https://apps.apple.com/app/id6456222792" target="_blank"><img src="/ios-app-store-badge.png" alt="App Store" /></a>
+      <a href="https://play.google.com/store/apps/details?id=com.MatthewBurton.BearPlane" target="_blank"><img src="/google-play-badge.png" alt="Google Play" /></a>
+    </div>
+  </div>
+
+  <div class="section">
+    <h2>Colida! Torra! Rugido! A vitória te aguarda!</h2>
+    <img src="/ram-roast-roar-gif.gif" alt="GIF de gameplay" class="gif">
+    <p>Faça chover justiça nos céus! Despedaçe aviões inimigos, asse os adversários em pleno voo com chamas propulsoras ou solte um rugido tão potente que expulse pilotos de seus cockpits. Os céus nunca mais serão os mesmos.</p>
+  </div>
+
+  <div class="section">
+    <h2>Equipe-se, fortaleça-se e arrase!</h2>
+    <img src="/800px-hats.gif" alt="GIF de equipamentos" class="gif">
+    <p>Cada herói precisa de arsenal... e estilo! Arme-se com bazucas, lanças de combate e outras armas aéreas. Vista chapéus táticos com poderes únicos: alguns fortalecem suas armas, outros ajudam em condições climáticas adversas. A combinação certa faz de você uma fortaleza voadora!</p>
+  </div>
+
+  <div class="section">
+    <h2>Dos criadores do primeiro café da manhã atômico</h2>
+    <img src="/atomic-mills-powers-gif.gif" alt="GIF de Atomic Mills" class="gif">
+    <p>Devore Flappy Flakes, saboreie Nukey Nectar e abra uma Honey Thunder Cola. Essas criações ultra-secretas conferem velocidade relâmpago, voos ousados e força bruta. Efeitos colaterais: possível dominação total.</p>
+  </div>
+
+  <div class="section">
+    <h2>Caos cooperativo</h2>
+    <img src="/800px-co-op.gif" alt="GIF de cooperação" class="gif">
+    <p>Pegue um controle e chame um copiloto! Jogador 2 assume o papel de Rocket Rat, seu fiel aliado armado. Unam forças, dobre o poder de fogo e libertem o caos em cada explosão.</p>
+  </div>
+
+  <div class="section faq">
+    <h2>FAQ</h2>
+    <div class="faq-item">
+      <h3>Bearplane é inspirado em uma história real?</h3>
+      <p>Pois é: sim! <em>Bearplane</em> é livremente inspirado em Wojtek, o urso que serviu ao lado de soldados poloneses na Segunda Guerra Mundial. Nossa versão traz jetpacks e ainda mais loucura :D</p>
+    </div>
+    <div class="faq-item">
+      <h3>Como foi o desenvolvimento de Bearplane?</h3>
+      <p><em>Bearplane</em> começou em 2020, durante o lockdown. Sem viagem nem trabalho, mergulhei na história de Wojtek e decidi criar esse jogo.</p>
+      <p>Busquei o contraste de <em>Fallout</em> – combates brutais em clima anos 40 – e a comédia física de <em>Tom &amp; Jerry</em>, com o grito de força de <em>Skyrim</em>.</p>
+      <p>Por dois anos, refinei o movimento e a jogabilidade central.</p>
+      <p>Em 2023, colaborei com Sean Smith, que compôs um soundtrack big-band gravado com uma verdadeira banda de jazz para capturar o clima da época. Os artistas Leo Siebert, Jordan Wadell e Vinnie Peters deram vida ao visual. O resultado superou expectativas.</p>
+      <p>Foram mais de 7.000 horas (e muitos cafés) para transformar essa ideia em um jogo completo.</p>
+    </div>
+    <div class="faq-item">
+      <h3>O que é a Atomic Mills?</h3>
+      <p>Atomic Mills é a (ficcional) empresa por trás de petiscos de guerra como <em>Nukey Nectar</em>, <em>Honey Thunder Cola</em> e <em>Flappy Flakes</em>. Fundada durante a Segunda Guerra Mundial, usava energia nuclear e abelhas radioativas para dar vantagem nutricional aos soldados.</p>
+      <p>Movida a patriotismo e um brilho laranja suspeito, entregava sabor explosivo e ciência duvidosa.</p>
+      <div class="atomic-images">
+        <img src="/nn-jar.png" alt="Nukey Nectar">
+        <img src="/ht-bottle.png" alt="Honey Thunder Cola">
+        <img src="/ff-box.png" alt="Flappy Flakes">
+        <img src="/ht-matt.png" alt="Honey Thunder Gym">
+      </div>
+    </div>
+    <div class="faq-item">
+      <h3>Bearplane é single player ou multiplayer?</h3>
+      <p>Ambos! Você pode jogar sozinho ou conectar um controle para coop local. O Jogador 2 controla Rocket Rat. Juntos, dobram o poder de fogo!</p>
+    </div>
+    <div class="faq-item">
+      <h3>Quais dispositivos e controles são suportados?</h3>
+      <p>No mobile: toque ou gamepad. No PC: mouse, teclado ou controle. <em>Bearplane</em> roda perfeitamente na Steam Deck.</p>
+    </div>
+    <div class="faq-item">
+      <h3>Bearplane funciona na Steam Deck?</h3>
+      <p>Sim: roda liso a 90 FPS. Otimizamos a versão PC para a Steam Deck.</p>
+      <p>O controle é detectado automaticamente; se necessário, selecione o layout “Gamepad” nas configurações.</p>
+    </div>
+    <div class="faq-item">
+      <h3>Qual a diferença entre a versão Steam e a mobile?</h3>
+      <p>O jogo base é o mesmo, mas:</p>
+      <ul>
+        <li><strong>Steam:</strong> compra única para desbloquear tudo, sem microtransações.</li>
+        <li><strong>Mobile:</strong> gratuito para baixar, depois compra única para liberar o jogo completo, que inclui:</li>
+        <ul>
+          <li>Seleção de <strong>chapéus especiais</strong> com poderes únicos</li>
+          <li><strong>Recompensas dobradas</strong> nas missões</li>
+          <li>Possibilidade de <strong>pular missões</strong></li>
+          <li>Acesso a <strong>rankings e conquistas</strong></li>
+          <li><strong>10 % a mais de sangue em estilo cartoon</strong></li>
+          <li><strong>Bônus:</strong> conecte um controle e jogue com Rocket Rat – Bearplane ataca sozinho!</li>
+        </ul>
+      </ul>
+    </div>
+    <div class="faq-item">
+      <h3>Como desbloquear a versão completa no mobile?</h3>
+      <p>Abra o menu principal e toque em “Comprar versão completa” para obter todos os bônus.</p>
+    </div>
+    <div class="faq-item">
+      <h3>Posso jogar offline?</h3>
+      <p>Sim! Sem Wi-Fi? Sem problemas. Jogue sem limitações.</p>
+    </div>
+    <div class="faq-item">
+      <h3>Haverá atualizações futuras?</h3>
+      <p>Claro! Planejamos updates mensais com novos chapéus, modos de jogo e surpresas.</p>
+    </div>
+    <div class="faq-item">
+      <h3>Posso sincronizar o progresso entre dispositivos?</h3>
+      <p>Ainda não, mas estamos trabalhando em sincronização na nuvem para o futuro.</p>
+    </div>
+    <div class="faq-item">
+      <h3>Bearplane é indicado para crianças?</h3>
+      <p><em>Bearplane</em> contém violência em estilo cartoon, desmembramentos e sangue. Supervisão dos pais recomendada.</p>
+    </div>
+    <div class="faq-item">
+      <h3>O jogo está disponível em outras línguas?</h3>
+      <p>A versão completa é em inglês, mas diálogos e tutoriais de Rocket Rat estão localizados em oito outros idiomas.</p>
+    </div>
+    <div class="faq-item">
+      <h3>Onde encontro política de privacidade e termos?</h3>
+      <p>Todos os documentos legais estão na página <a href="/legal.html">Legal</a>.</p>
+    </div>
+    <div class="faq-item">
+      <h3>Posso oferecer um café ao Matt?</h3>
+      <p>Claro! Se <em>Bearplane</em> te fez rir ou vibrar, apoie minha próxima sessão de código com um café:<br><a href="https://buymeacoffee.com/burtbot" target="_blank">coff.ee/burtbot</a></p>
+      <p>(Muito obrigado!)</p>
+    </div>
+    <div class="faq-item">
+      <h3>Onde posso enviar dúvidas ou feedback?</h3>
+      <p>Adoramos te ouvir! Escreva para <a href="mailto:AtomicMills@aol.com">AtomicMills@aol.com</a> ou junte-se ao nosso <a href="https://discord.gg/HK3xWJTdjc" target="_blank">Discord</a>. Ideias, bugs ou piadas de urso… estamos prontos!</p>
+    </div>
+  </div>
+
+  <div class="footer-links" style="text-align:center; margin-top:2em;">
+    <a href="/">⌂ Home</a> |
+    <a href="/bearplane.html">English</a> |
+    <a href="/fr/">Français</a> |
+    <a href="/es/">Español</a> |
+    <a href="/de/">Deutsch</a> |
+    <a href="/it/">Italiano</a> |
+    <a href="/pt/">Português</a> |
+    <a href="/pl/">Polski</a> |
+    <a href="/zh/">简体中文</a> |
+    <a href="/ja/">日本語</a>
+  </div>
+
+  <div class="lightbox-overlay" id="lightbox">
+    <img src="" alt="Imagem ampliada" id="lightbox-img">
+  </div>
+
+  <script>
+    const lightbox = document.getElementById("lightbox");
+    const lightboxImg = document.getElementById("lightbox-img");
+    document.querySelectorAll(".atomic-images img").forEach(img => img.addEventListener("click", () => {
+      lightboxImg.src = img.src;
+      lightbox.style.display = "flex";
+    }));
+    lightbox.addEventListener("click", () => {
+      lightbox.style.display = "none";
+      lightboxImg.src = "";
+    });
+  </script>
+
+</body>
+</html>
