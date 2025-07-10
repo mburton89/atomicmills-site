@@ -1,0 +1,63 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Atomic Mills T-Shirt</title>
+  <link rel="stylesheet" href="styles.css"> <!-- Link to your external CSS -->
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f9f9f9;
+      padding: 20px;
+      text-align: center;
+    }
+    .shirt-container {
+      max-width: 700px;
+      margin: auto;
+      background: white;
+      padding: 30px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      border-radius: 12px;
+    }
+    .shirt-images {
+      display: flex;
+      gap: 10px;
+      justify-content: center;
+      margin-bottom: 20px;
+    }
+    .shirt-images img {
+      max-width: 45%;
+      border-radius: 10px;
+    }
+    .sold-out {
+      font-size: 1.5rem;
+      color: red;
+      margin-bottom: 20px;
+    }
+    .notify-button {
+      padding: 12px 24px;
+      font-size: 1rem;
+      background-color: #000;
+      color: #fff;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+    .notify-button:hover {
+      background-color: #333;
+    }
+  </style>
+</head>
+<body>
+  <div class="shirt-container">
+    <h1>Atomic Mills T-Shirt</h1>
+    <div class="shirt-images">
+      <img src="images/atomic-shirt-front.png" alt="Front of Atomic Mills T-Shirt">
+      <img src="images/atomic-shirt-preview.png" alt="Back of Atomic Mills T-Shirt">
+    </div>
+    <div class="sold-out">SOLD OUT</div>
+    <button class="notify-button">Notify Me</button>
+  </div>
+</body>
+</html>
