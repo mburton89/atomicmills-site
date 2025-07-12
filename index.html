@@ -135,12 +135,17 @@
       font-size: 0.85em;
     }
 
+    .logo-stack {
+      display: inline-block;   /* lets text-align:center on the body work */
+      margin: 0 auto 20px;     /* auto‐side margins center it, 20px bottom gap */
+      text-align: center;      /* not strictly needed for imgs, but safe */
+    }
+    
     .logo-stack img {
-      display: block;
-      margin: 0;
-      padding: 0;
-      width: 300px;      /* or 100% / max-width:300px, whatever you prefer */
+      display: block;          /* one per line, no inline whitespace */
+      width: 300px;            /* or whatever fixed/max width you want */
       max-width: 100%;
+      margin: 0;               /* already block, so no extra margins */
     }
 
   </style>
