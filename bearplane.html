@@ -329,7 +329,17 @@
     <!-- Clickable image linking to the Wojtek video -->
     <div class="wojtek-images">
       <img src="images/wojtek-2.png" alt="Wojtek Sketch Left" />
-      <img src="images/story-of-wojtek-play.png" alt="Watch the real-life Wojtek story" />
+      
+      <!-- Wrap the “play” thumbnail in a link -->
+      <a href="https://www.youtube.com/watch?v=IEXTHNB4WO4"
+         target="_blank"
+         rel="noopener">
+        <img
+          src="images/story-of-wojtek-play.png"
+          alt="Watch the real-life Wojtek story"
+        />
+      </a>
+      
       <img src="images/wojtek-4.png" alt="Wojtek Sketch Right" />
     </div>
   </div>
@@ -475,24 +485,26 @@
     <img src="" alt="Enlarged Image" id="lightbox-img">
   </div>
   
-  <script>
-    const lightbox = document.getElementById("lightbox");
-    const lightboxImg = document.getElementById("lightbox-img");
-  
-    document.querySelectorAll(".atomic-images img, .wojtek-images img").forEach(img => {
+<script>
+  const lightbox = document.getElementById("lightbox");
+  const lightboxImg = document.getElementById("lightbox-img");
+
+  // Select all the thumbnails, but filter out any that are wrapped in <a>
+  document
+    .querySelectorAll(".atomic-images img, .wojtek-images img")
+    .forEach(img => {
+      if (img.closest("a")) return;   // skip any image inside a link
       img.addEventListener("click", () => {
         lightboxImg.src = img.src;
         lightbox.style.display = "flex";
       });
     });
-  
-    lightbox.addEventListener("click", () => {
-      lightbox.style.display = "none";
-      lightboxImg.src = "";
-    });
-  </script>
 
-
+  lightbox.addEventListener("click", () => {
+    lightbox.style.display = "none";
+    lightboxImg.src = "";
+  });
+</script>
 
 </body>
 </html>
