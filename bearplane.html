@@ -259,7 +259,32 @@
     border-radius: 8px;
   }
 
+  /* Center the rows of images */
+  .art-images,
+  .music-images,
+  .dev-images {
+    display: flex;
+    justify-content: center;
+    gap: 20px;        /* space between each image */
+    margin: 1em 0;    /* vertical spacing above/below */
+  }
 
+  .art-images img,
+  .music-images img,
+  .dev-images img {
+    height: 140px;
+    width: auto;
+    object-fit: contain;
+    border-radius: 8px;
+    transition: transform 0.2s ease;
+    cursor: pointer;
+  }
+
+  .art-images img:hover,
+  .music-images img:hover,
+  .dev-images img:hover {
+    transform: scale(1.05);
+  }
 
 </style>
 </head>
@@ -324,7 +349,7 @@
   <div class="faq-item">
     <h3>Is Bearplane really inspired by a true story?</h3>
     <p>
-      Believe it or not, yes! <em>Bearplane</em> takes loose inspiration from Wojtek, the real-life bear who served alongside Polish soldiers in World War II. Our version adds a few more jet packs and shenanigans :D (Watch the video below to see the real Wojtek in action!)
+      Believe it or not, yes! <em>Bearplane</em> takes loose inspiration from Wojtek, the real-life bear who served alongside Polish soldiers in World War II. Our version adds a few more jet packs and shenanigans :D (Watch the video below to learn about the real Wojtek!)
     </p>
     <!-- Clickable image linking to the Wojtek video -->
     <div class="wojtek-images">
@@ -345,13 +370,56 @@
   </div>
 
   <div class="faq-item">
-    <h3>What was the development of Bearplane like?</h3>
-    <p><em>Bearplane</em> took flight in 2020 during lockdown. With travel and work suddenly off the table, I found myself deep in the weird corners of history, where I discovered the incredible story of Wojtek. It was bizarre, funny, and strangely heroic… I HAD to make a game about it.</p>
-    <p>I was inspired by the tonal contrast in <em>Fallout</em>—brutal combat wrapped in cheerful 1940s vibes. I wanted <em>Bearplane</em> to feel like that too. I also borrowed from <em>Skyrim’s</em> shout mechanic and the physical comedy of the cartoon <em>Tom and Jerry</em>, where the audio always perfectly matches the slapstick mayhem.</p>
-    <p>For two years, I focused entirely on getting the movement and core mechanic to feel just right.</p>
-    <p>By 2023, I teamed up with composer Sean Smith, who created the game’s big-band score and recorded it with a real jazz band to capture the spirit of the era. I also brought on incredible artists Leo Siebert, Jordan Wadell, and Vinnie Peters, who helped bring <em>Bearplane</em> to life visually. I couldn’t be happier with how well the team worked together. Everyone brought their unique strengths and creative energy, and the final result surpassed all my expectations.</p>
-    <p>Since then, over 7,000 hours (and cups of coffee) have gone into turning this very reasonable idea of a bear with a jetpack into a fully playable game.</p>
+    <h3>How was Bearplane developed?</h3>
+    <p>
+      Bearplane took flight during the 2020 lockdown, when travel and work screeched to a halt. Its creator, 
+      <a href="https://www.instagram.com/BurtBot/" target="_blank" rel="noopener noreferrer">Matthew Burton</a>, began exploring the quirkiest corners of history and discovered Wojtek, the ammo-hauling WWII bear. It was a tale too wild not to inspire a loosely adapted game.
+    </p>
+    <p>
+      Developed in Unity with C#, Bearplane’s early stages focused entirely on nailing the feel. Over the course of three years, Burton refined the movement mechanics, combat system, and particle effects until everything clicked. Inspirations included 
+      <strong>Fallout</strong>’s brutal combat wrapped in cheerful 1940s vibes, 
+      <strong>Skyrim</strong>’s shout mechanic, and 
+      <strong>Tom &amp; Jerry</strong>’s perfectly synced slapstick timing.
+    </p>
+    <p>
+      In 2023, artists Leo Siebert,  
+      <a href="https://www.jordanwadellart.com" target="_blank" rel="noopener noreferrer">Jordan Wadell</a>,  
+      Vinnie Peters, and  
+      <a href="https://www.behance.net/Michael_Burgess" target="_blank" rel="noopener noreferrer">Michael Burgess</a>  
+      joined the project to hand-draw characters in a 1940s-cartoon style, paint sweeping scenic backdrops, and design wartime-propaganda UI. The team met in person for just four sessions, then handled the rest of their collaboration remotely via Discord.
+    </p>
+    <p>
+      Since then, over 7,000 hours (and many cups of coffee) have gone into transforming the completely reasonable idea of a jetpack-wearing bear into a fully playable game.
+    </p>
+    <div class="atomic-images">
+      <img src="images/matt-coding.png" alt="Matt Coding" />
+      <img src="images/matt-and-leo.png" alt="Matt and Leo" />
+      <img src="images/matt-and-jordan.png" alt="Matt and Jordan" />
+      <img src="images/bear-concepts.png" alt="Jordan's Bear Concepts" />
+    </div>
   </div>
+
+  <div class="faq-item">
+    <h3>Who composed Bearplane’s music?</h3>
+    <p>
+     Composers Sean Smith and Jacob Souders wrote Bearplane’s big-band, swing-era soundtrack. The score was recorded with a live jazz ensemble and brims with soaring brass and the kind of swagger you'd expect from a bear with a jetpack. (Listen to the soundtrack below!)
+    </p>
+     <div class="music-images">
+      <img src="images/bearstrike-sheet-music.png"  alt="Studio Session Left" />
+      <!-- <img src="images/playlist-cover.png"         alt="Final Soundtrack Waveform" /> -->
+
+      <a href="https://youtube.com/playlist?list=PLQPL3osDpkOZVecU-izv8LZIvEdtOD6Qi&feature=shared"
+         target="_blank"
+         rel="noopener">
+        <img
+          src="images/playlist-cover.png"
+          alt="Bearplane Official Soundtrack"
+        />
+      </a>
+
+      <img src="images/music-studio.png" alt="Studio Session Right" />
+    </div>
+  </div> 
 
   <div class="faq-item">
     <h3>Who or what on earth is Atomic Mills?</h3>
@@ -378,7 +446,7 @@
   <div class="faq-item" id="steam-deck">
     <h3>Does Bearplane run on Steam Deck?</h3>
     <p><em>Bearplane</em> runs exceedingly well on Steam Deck. In fact, a lot of the focus for the PC version has gone into optimizing it specifically for Steam Deck, ensuring buttery-smooth performance at 90 FPS.</p>
-    <p>The gamepad layout should be set by default. If it’s not, we recommend switching the controller layout type to "Gamepad" in your Steam Deck settings for the best experience.</p>
+    <p>The <strong>gamepad layout</strong> should be set by default. If it’s not, we recommend switching the controller layout type to "Gamepad" in your Steam Deck settings for the best experience.</p>
   </div>
 
   <div class="faq-item">
@@ -405,7 +473,7 @@
   
   <div class="faq-item">
     <h3>Can I play Bearplane offline?</h3>
-    <p>Absolutely. No Wi-Fi? No problem. You can play offline with no penalties or restrictions.</p>
+    <p>Absolutely. You can play offline with no penalties or restrictions.</p>
   </div>
 
   <div class="faq-item">
@@ -433,28 +501,18 @@
     <p>All legal documents, including our Privacy Policy and Terms of Service, can be found on our <a href="legal.html">Legal</a> page.</p>
   </div>
 
-  <div class="faq-item">
+  <!-- <div class="faq-item">
     <h3>Matt, can I buy you coffee?</h3>
     <p>Why yes, you can! If <em>Bearplane</em> made you laugh, smile, or roar in public, feel free to fuel my next coding session with some caffeine:<br>
     <a href="https://buymeacoffee.com/burtbot" target="_blank">coff.ee/burtbot</a></p>
     <p>(And thank you, you rock!)</p>
-  </div>
+  </div> -->
   
   <div class="faq-item">
     <h3>Where can I ask questions or submit feedback?</h3>
     <p>We’d love to hear from you! Email us at <a href="mailto:AtomicMills@aol.com">AtomicMills@aol.com</a> or join the conversation on <a href="https://discord.gg/HK3xWJTdjc" target="_blank">Discord</a>. Whether it’s ideas, bugs, or just bear puns—we’re all ears.</p>
   </div>
 </div>
-
-<!--   <div class="social-links">
-    <a href="https://www.atomicmills.com">Home</a> |
-    <a href="https://www.instagram.com/atomicmillsco/" target="_blank">Instagram</a> |
-    <a href="https://www.linkedin.com/company/atomic-mills" target="_blank">LinkedIn</a> |
-    <a href="https://x.com/AtomicMillsCo" target="_blank">X</a> |
-    <a href="mailto:AtomicMills@aol.com">Email</a> |
-    <a href="blog.html">Blog</a> |
-    <a href="legal.html">Legal</a>
-  </div> -->
   
 <div class="footer-links" style="text-align: center; margin-top: 2em;">
 <!--   <a href="/">⌂ Home</a> | -->
@@ -491,7 +549,7 @@
 
   // Select all the thumbnails, but filter out any that are wrapped in <a>
   document
-    .querySelectorAll(".atomic-images img, .wojtek-images img")
+      .querySelectorAll(".atomic-images img, .wojtek-images img, .art-images img, .music-images img, .dev-images img")
     .forEach(img => {
       if (img.closest("a")) return;   // skip any image inside a link
       img.addEventListener("click", () => {

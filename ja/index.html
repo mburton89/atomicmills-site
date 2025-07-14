@@ -4,27 +4,17 @@
   <meta charset="UTF-8">
   <title>Bearplane | Atomic Mills</title>
   <style>
-    body { background: #fffbe6; font-family: monospace; text-align: center; padding: 0; margin: 0; font-size: 12px; }
+    body {
+      background: #fffbe6;
+      font-family: monospace;
+      text-align: center;
+      padding: 40px;
+      margin: 0;
+      font-size: 12px;
+    }
     @media (max-aspect-ratio: 1/1) { body { font-size: 12px; } }
     @media (min-aspect-ratio: 1/1) { body { font-size: 16px; } }
     h1, h2 { color: darkred; }
-    .logo { max-width: 300px; margin-bottom: 20px; }
-
-    .hero-gif {
-      width: 100%;
-      max-width: 800px;
-      margin: 0 auto;
-      display: block;
-    }
-    
-    @media (max-aspect-ratio: 50/49) {
-      .hero-gif {
-        width: 100vw;
-        max-width: none;
-        margin: 0;
-      }
-    }
-
     .section { max-width: 800px; margin: 40px auto; text-align: left; }
     .section h2 { border-bottom: 2px solid darkred; padding-bottom: 5px; }
     .gif { width: 100%; max-width: 800px; display: block; margin: 20px auto; }
@@ -33,16 +23,25 @@
     .faq-item { margin-bottom: 20px; }
     .faq-item p { margin: 5px 0; }
     a { color: darkred; text-decoration: underline; font-weight: bold; }
-    .trailer-button { text-align: center; margin-bottom: 20px; }
-    .btn { display: inline-flex; align-items: center; justify-content: center; background-color: darkred; color: white; padding: 15px 40px; font-weight: bold; font-size: 1.4em; text-decoration: none; border-radius: 8px; transition: background-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease; gap: 10px; }
-    .btn:hover { background-color: #a00; transform: scale(1.05); box-shadow: 0 4px 12px rgba(0,0,0,0.2); }
+    html, body { margin: 0; padding: 0; width: 100%; overflow-x: hidden; }
+    .hero-gif { width: 100%; max-width: 800px; margin: 0 auto; display: block; }
+    @media (max-aspect-ratio: 50/49) { .hero-gif { width:100vw; max-width:none; margin:0; } }
     .store-buttons { display: flex; justify-content: center; gap: 10px; margin-top: 20px; flex-wrap: wrap; }
-    .store-buttons img { height: 76px; max-width: 262px; object-fit: contain; transition: transform 0.2s ease, box-shadow 0.2s ease; }
+    .store-buttons img { height: 76px; max-width: 262px; object-fit: contain; transition: transform .2s, box-shadow .2s; }
     .store-buttons img:hover { transform: scale(1.05); box-shadow: 0 4px 12px rgba(0,0,0,0.2); }
-    .atomic-images { display: flex; justify-content: center; gap: 20px; margin-top: 10px; flex-wrap: wrap; }
-    .atomic-images img { width: 140px; height: 140px; object-fit: cover; border-radius: 8px; transition: transform 0.2s ease; cursor: pointer; }
-    .atomic-images img:hover { transform: scale(1.05); }
-    .lightbox-overlay { position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; background: rgba(0,0,0,0.85); display: none; justify-content: center; align-items: center; z-index: 9999; }
+    .atomic-images, .wojtek-images, .dev-images, .music-images {
+      display: flex; justify-content: center; gap: 20px; margin: 1em 0; flex-wrap: wrap;
+    }
+    .atomic-images img, .wojtek-images img, .dev-images img, .music-images img {
+      height: 140px; width: auto; object-fit: contain; border-radius: 8px; transition: transform .2s; cursor: pointer;
+    }
+    .atomic-images img:hover, .wojtek-images img:hover, .dev-images img:hover, .music-images img:hover {
+      transform: scale(1.05);
+    }
+    .lightbox-overlay {
+      position: fixed; top: 0; left: 0; width: 100vw; height: 100vh;
+      background: rgba(0,0,0,0.85); display: none; justify-content: center; align-items: center; z-index: 9999;
+    }
     .lightbox-overlay img { max-width: 90%; max-height: 90%; border-radius: 8px; }
   </style>
 </head>
@@ -51,64 +50,97 @@
   <img src="/images/main-12.gif" alt="Bearplane ロゴ" class="hero-gif">
 
   <div class="section">
-<!--     <div class="trailer-button">
-      <a href="https://youtu.be/3JW6-kAru64" class="btn" target="_blank">▶ トレーラーを見る</a>
-    </div> -->
     <p class="intro-paragraph">
-      <em><strong>ロケット駆動のクマとなって空を駆ける『Bearplane』：ウオイテク伝説に自由にインスパイアされた、ド派手でアクション満載のアドベンチャー。狂気のスキル、核スナック、空の大混乱で狡猾な敵を打ち倒せ。</strong></em>
+      <em><strong>ロケットパワーのクマとして空を駆ける『Bearplane』は、第二次世界大戦の伝説のクマ・ヴォイテクの物語にゆるく着想を得た、ユーモアとアクション満載の冒険です。奇想天外な能力、核融合スナック、混沌の空戦をお楽しみください。</strong></em>
     </p>
     <p id="coming-soon-text" style="text-align:center; font-weight:bold; font-size:1.3em; color:darkred; margin-bottom:5px;">
       近日配信予定：
     </p>
     <div class="store-buttons">
-      <a href="https://store.steampowered.com/app/3370980" target="_blank"><img src="/steam-badge.png" alt="Steam" /></a>
-      <a href="https://apps.apple.com/app/id6456222792" target="_blank"><img src="/ios-app-store-badge.png" alt="App Store" /></a>
-      <a href="https://play.google.com/store/apps/details?id=com.MatthewBurton.BearPlane" target="_blank"><img src="/google-play-badge.png" alt="Google Play" /></a>
+      <a href="https://store.steampowered.com/app/3370980" target="_blank">
+        <img src="/steam-badge.png" alt="Steam">
+      </a>
+      <a href="https://apps.apple.com/app/id6456222792" target="_blank">
+        <img src="/ios-app-store-badge.png" alt="App Store">
+      </a>
+      <a href="https://play.google.com/store/apps/details?id=com.MatthewBurton.BearPlane" target="_blank">
+        <img src="/google-play-badge.png" alt="Google Play">
+      </a>
     </div>
   </div>
 
   <div class="section">
-    <h2>ぶつけろ！焼き尽くせ！吠えろ！勝利は君のもの！</h2>
+    <h2>突撃！炙り！咆哮！勝利をつかめ！</h2>
     <img src="/ram-roast-roar-gif.gif" alt="ゲームプレイ GIF" class="gif">
-    <p>天誅（てんちゅう）を下せ！敵機を粉々にぶつけ、推進火炎で空中の敵を焼き尽くし、轟音の咆哮でパイロットをコックピットから吹き飛ばせ。空はもう平穏ではない。</p>
+    <p>正義の鉄槌を空から下ろせ！敵機を激突で粉砕し、火炎で炙り、轟音の咆哮でパイロットを吹き飛ばせ。</p>
   </div>
 
   <div class="section">
-    <h2>装備し、強化し、魅せつけろ！</h2>
-    <img src="/800px-hats.gif" alt="装備選択 GIF" class="gif">
-    <p>ヒーローたるもの武装とスタイルは必須！バズーカやジャベリンなどの空中兵器を携え、戦術帽を被ろう。武器強化型、悪天候耐性型など様々。最適な組み合わせで空飛ぶ要塞になれ！</p>
+    <h2>装備・強化・華麗に決めろ！</h2>
+    <img src="/800px-hats.gif" alt="装備 GIF" class="gif">
+    <p>ヒーローには武器とスタイルが必要だ！バズーカ、ランスなどを装備し、戦術帽を被って極上のコンボを決めろ。</p>
   </div>
 
   <div class="section">
-    <h2>世界初の“原子朝食”クリエイターより</h2>
+    <h2>世界初の原子朝食 開発元</h2>
     <img src="/atomic-mills-powers-gif.gif" alt="Atomic Mills GIF" class="gif">
-    <p>Flappy Flakes をむさぼり、Nukey Nectar を飲み、Honey Thunder Cola の栓を抜け。極秘の栄養素が超高速移動、華麗な飛行、圧倒的パワーを与える。副作用：世界征服かも…？</p>
+    <p>Flappy Flakesを頬張り、Nukey Nectarを飲み、Honey Thunder Colaで締めくくる。これら全てが爆速・突撃力・怪力をもたらす秘密の兵器だ。</p>
   </div>
 
   <div class="section">
-    <h2>協力プレイで大混乱</h2>
-    <img src="/800px-co-op.gif" alt="協力モード GIF" class="gif">
-    <p>コントローラーを手に取り、副操縦士を招集！プレイヤー2 は Rocket Rat、武装済みの相棒だ。火力二倍で爆発の嵐を巻き起こせ。</p>
+    <h2>協力プレイの大混乱</h2>
+    <img src="/800px-co-op.gif" alt="協力プレイ GIF" class="gif">
+    <p>一人でも、コントローラー接続で二人プレイもOK！プレイヤー2はRocket Ratとして参戦。一緒に空を支配しよう。</p>
   </div>
 
   <div class="section faq">
-    <h2>FAQ</h2>
+    <h2>よくある質問</h2>
+
     <div class="faq-item">
-      <h3>『Bearplane』は実話が元になっている？</h3>
-      <p>その通り！<em>Bearplane</em>は第二次世界大戦でポーランド軍と共に戦った本物のクマ“ウオイテク”に自由にインスパイア。そこにジェットパックと狂気をプラス！</p>
+      <h3>Bearplaneは本当に実話が元になっているの？</h3>
+      <p>驚くなかれ、はい！<em>Bearplane</em>はポーランド兵と共に戦った実在のクマ、ヴォイテクにインスパイアされています。より多くのロケットパックと狂気をプラス！ :D</p>
+      <div class="wojtek-images">
+        <img src="/images/wojtek-2.png" alt="ヴォイテク 左スケッチ">
+        <a href="https://youtu.be/IEXTHNB4WO4" target="_blank" rel="noopener">
+          <img src="/images/story-of-wojtek-play.png" alt="ヴォイテクの実話を見る">
+        </a>
+        <img src="/images/wojtek-4.png" alt="ヴォイテク 右スケッチ">
+      </div>
     </div>
+
     <div class="faq-item">
-      <h3>開発はどのように進んだ？</h3>
-      <p><em>Bearplane</em>は2020年ロックダウン中に始動。旅も仕事もできない間にウオイテク伝説に没入し、ゲーム化を決意。</p>
-      <p>『Fallout』の陽気な40年代空間で繰り広げる過激戦闘、『Tom &amp; Jerry』の物理コメディ、『Skyrim』の咆哮…これらを融合。</p>
-      <p>2年間、動きとコアメカニクスを徹底的に研ぎ澄ませた。</p>
-      <p>2023年には作曲家 Sean Smith と組み、ビッグバンドサウンドトラックを本物のジャズバンドで録音。アーティストLeo Siebert、Jordan Wadell、Vinnie Petersがビジュアルを完成させ、結果は大成功。</p>
-      <p>合計7000時間以上（それ以上のコーヒー）を注ぎ込み、この狂気をゲームに昇華。</p>
+      <h3>Bearplaneの開発はどう進んだの？</h3>
+      <p><em>Bearplane</em>は2020年のロックダウン中に始動。クリエイターの<a href="https://www.instagram.com/BurtBot/" target="_blank" rel="noopener noreferrer">Matthew Burton</a>が歴史の奇妙な領域を探求し、弾薬を運ぶクマ、ヴォイテクを発見。ゲーム化決定！</p>
+      <p>Unity＋C#で開発し、3年間に渡り動き、戦闘、パーティクルを磨き抜いた。<strong>Fallout</strong>の容赦ない戦闘×1940年代風、<strong>Skyrim</strong>の叫びメカニクス、<strong>Tom & Jerry</strong>の完璧同期スラップスティックが着想源。</p>
+      <p>2023年にLeo Siebert、  
+         <a href="https://www.jordanwadellart.com" target="_blank" rel="noopener noreferrer">Jordan Wadell</a>、  
+         Vinnie Peters、  
+         <a href="https://www.behance.net/Michael_Burgess" target="_blank" rel="noopener noreferrer">Michael Burgess</a>  
+      が参加し、1940年代風キャラや壮大背景、プロパガンダ風UIを制作。対面4回、残りはDiscordでコラボ。</p>
+      <div class="dev-images">
+        <img src="/images/matt-coding.png" alt="Matt コーディング中">
+        <img src="/images/matt-and-leo.png" alt="MattとLeo">
+        <img src="/images/matt-and-jordan.png" alt="MattとJordan">
+        <img src="/images/bear-concepts.png" alt="Jordanのベアコンセプト">
+      </div>
+      <p>以降7,000時間超（コーヒー片手に）を費やし、ロケットクマの夢を完全なるアーケード体験に昇華！</p>
     </div>
+
     <div class="faq-item">
-      <h3>Atomic Mills とは？</h3>
-      <p>Atomic Mills は架空の企業で、戦場で人気のNukey Nectar、Honey Thunder Cola、Flappy Flakesを開発。第二次大戦期に核エネルギーと放射性ミツバチを活用し、兵士に栄養優位をもたらした。</p>
-      <p>愛国心と謎のオレンジ光に突き動かされ、爆発的な美味と…怪しげな科学を提供。</p>
+      <h3>Bearplaneの音楽は誰が作曲？</h3>
+      <p>作曲家Sean SmithとJacob Soudersが、ライブジャズアンサンブルと共にビッグバンド・スウィングサウンドトラックを制作。華麗な金管、熱いピアノ、クマにふさわしいグルーヴ満載！（以下プレイリストで試聴可）</p>
+      <div class="music-images">
+        <img src="/images/bearstrike-sheet-music.png" alt="Bearstrike 楽譜">
+        <a href="https://youtube.com/playlist?list=PLQPL3osDpkOZVecU-izv8LZIvEdtOD6Qi" target="_blank" rel="noopener">
+          <img src="/images/playlist-cover.png" alt="公式サウンドトラック">
+        </a>
+        <img src="/images/music-studio.png" alt="スタジオセッション">
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <h3>Atomic Millsとは？</h3>
+      <p>Atomic Millsは架空の食品飲料会社で、<em>Nukey Nectar</em>、<em>Honey Thunder Cola</em>、<em>Flappy Flakes</em>などを製造。第二次世界大戦期に核エネルギーと放射性ハチを活用して兵士を強化。</p>
       <div class="atomic-images">
         <img src="/nn-jar.png" alt="Nukey Nectar">
         <img src="/ht-bottle.png" alt="Honey Thunder Cola">
@@ -116,72 +148,86 @@
         <img src="/ht-matt.png" alt="Honey Thunder Gym">
       </div>
     </div>
+
     <div class="faq-item">
-      <h3>シングルプレイ？それともマルチプレイ？</h3>
-      <p>どちらも！ソロ飛行も、コントローラー接続でローカル協力プレイも可能。プレイヤー2はRocket Rat、共に火力二倍！</p>
+      <h3>シングルプレイとマルチプレイ、どちら？</h3>
+      <p>どちらも可能！ソロプレイまたはローカル協力プレイ（2PはRocket Rat担当）。</p>
     </div>
+
     <div class="faq-item">
-      <h3>対応デバイスと操作方法は？</h3>
-      <p>モバイル：タッチ or コントローラー。PC：マウス、キーボード or コントローラー。Steam Deckでも快適プレイ。</p>
+      <h3>対応プラットフォームと操作方法は？</h3>
+      <p>モバイルはタッチまたはコントローラー、PCはマウス/キーボード/コントローラー、Steam Deck対応。</p>
     </div>
-    <div class="faq-item">
-      <h3>Steam Deckで動く？</h3>
-      <p>もちろん！90FPSで超快適。PC版はSteam Deck向けに最適化済み。</p>
-      <p>コントローラー自動認識。必要なら設定で「Gamepad」レイアウトを選択。</p>
+
+    <div class="faq-item" id="steam-deck">
+      <h3>Steam Deckで動作する？</h3>
+      <p><em>Bearplane</em>はSteam Deck向けに90FPS最適化済み。コントローラーレイアウトが出ない場合は設定で「Gamepad」を選択。</p>
     </div>
+
     <div class="faq-item">
       <h3>Steam版とモバイル版の違いは？</h3>
-      <p>基本は同じだが：</p>
       <ul>
-        <li><strong>Steam：</strong>一括購入で全解放、マイクロトランザクションなし。</li>
-        <li><strong>モバイル：</strong>無料で入手後、一括購入で完全版を解放。内容：</li>
-        <ul>
-          <li>ユニーク能力を持つ<strong>特殊帽子</strong>セット</li>
-          <li>ミッション報酬<strong>二倍</strong></li>
-          <li>ミッション<strong>スキップ</strong>機能</li>
-          <li>ランキング &amp; 実績へのアクセス</li>
-          <li>カートゥーン血液+10%</li>
-          <li><strong>ボーナス：</strong>コントローラー接続でRocket Rat操作、Bearplane自動攻撃！</li>
-        </ul>
+        <li><strong>Steam版：</strong>4.99USDの一括購入、マイクロトランザクションなし。</li>
+        <li><strong>モバイル版：</strong>無料、本編アンロック4.99USDで以下が含まれる：
+          <ul>
+            <li>特別な帽子＋ユニークスキル</li>
+            <li>ミッション報酬2倍</li>
+            <li>ミッションスキップ機能</li>
+            <li>リーダーボード＆実績</li>
+            <li>カートゥーン血しぶき10%増量</li>
+            <li>ボーナス：Rocket Ratを操作中Bearplane自動攻撃</li>
+          </ul>
+        </li>
       </ul>
     </div>
+
     <div class="faq-item">
-      <h3>モバイルで完全版を解放するには？</h3>
-      <p>メインメニューで「完全版を購入」をタップすると全ボーナスをアンロック。</p>
+      <h3>どうやってモバイルでフルゲームをアンロック？</h3>
+      <p>メインメニューの「フルゲーム購入」をタップ。</p>
     </div>
+
     <div class="faq-item">
-      <h3>オフラインで遊べる？</h3>
-      <p>はい！Wi-Fi不要、制限なくプレイ可能。</p>
+      <h3>オフラインプレイは？</h3>
+      <p>可能です。Wi-Fiなしでも遊べます。</p>
     </div>
+
     <div class="faq-item">
-      <h3>今後アップデートは？</h3>
-      <p>もちろん！毎月、新帽子やモード、サプライズを配信予定。</p>
+      <h3>今後のアップデートは？</h3>
+      <p>あります！毎月新帽子・新モード・サプライズを追加。</p>
     </div>
+
     <div class="faq-item">
-      <h3>デバイス間で進行度は同期できる？</h3>
-      <p>まだ未対応ですが、クラウド同期機能を開発中。</p>
+      <h3>進行状況の共有は？</h3>
+      <p>まだ未対応ですが、クラウド同期を計画中。</p>
     </div>
+
     <div class="faq-item">
-      <h3>子供向け？</h3>
-      <p><em>Bearplane</em>にはカートゥーン暴力、手足切断、血液表現あり。保護者の監督推奨。</p>
+      <h3>子ども向き？</h3>
+      <p><em>Bearplane</em>はカートゥーン暴力と血しぶきあり。保護者の監督推奨。</p>
     </div>
+
     <div class="faq-item">
-      <h3>他言語対応？</h3>
-      <p>完全版は英語ですが、Rocket Ratのダイアログとチュートリアルは他8言語にローカライズ。</p>
+      <h3>他言語対応は？</h3>
+      <p>英語が基本ですが、対話とチュートリアルは日本語、中国語簡体字、スペイン語、ドイツ語、フランス語、ポーランド語、ポルトガル語、イタリア語にローカライズ済み。</p>
     </div>
+
     <div class="faq-item">
       <h3>プライバシーポリシーと利用規約は？</h3>
-      <p>法的ドキュメントはすべて<a href="/legal.html">Legal</a>ページに掲載。</p>
+      <p>法的文書は<a href="/legal.html">「Legal」</a>ページを参照。</p>
     </div>
+
     <div class="faq-item">
-      <h3>Mattにコーヒーを奢れる？</h3>
-      <p>もちろん！<em>Bearplane</em>で笑顔や興奮をもらったら、次のコーディングにコーヒーを：<br><a href="https://buymeacoffee.com/burtbot" target="_blank">coff.ee/burtbot</a></p>
-      <p>（心から感謝！）</p>
+      <h3>コーヒーおごってもいい？</h3>
+      <p>ぜひ！<em>Bearplane</em>で笑ったり咆哮したらコーヒーを：<br>
+      <a href="https://buymeacoffee.com/burtbot" target="_blank" rel="noopener noreferrer">coff.ee/burtbot</a></p>
     </div>
+
     <div class="faq-item">
-      <h3>質問やフィードバックはどこに？</h3>
-      <p>ご意見お待ちしています！<a href="mailto:AtomicMills@aol.com">AtomicMills@aol.com</a>まで、または<a href="https://discord.gg/HK3xWJTdjc" target="_blank">Discord</a>でどうぞ。アイデア、バグ、クマジョーク…お聞かせください！</p>
+      <h3>質問やフィードバックは？</h3>
+      <p>メール：<a href="mailto:AtomicMills@aol.com">AtomicMills@aol.com</a><br>
+      Discord：<a href="https://discord.gg/HK3xWJTdjc" target="_blank">参加はこちら</a></p>
     </div>
+
   </div>
 
   <div class="footer-links" style="text-align:center; margin-top:2em;">
@@ -195,8 +241,15 @@
     <a href="/pl/">Polski</a> |
     <a href="/zh/">简体中文</a> |
     <a href="/ja/">日本語</a>
-<!--   | <a href="https://drive.google.com/drive/folders/1frnhqy5XK2Sel6olELFOckkLg0NcYEWU?usp=sharing" target="_blank">Media Kit 🗂️</a> -->
   </div>
+
+  <div style="margin-top:60px;">
+    <a href="index.html"><img src="/images/atom.gif" alt="Atomic Mills ホーム" style="width:100px; display:block; margin:0 auto;"></a>
+  </div>
+
+  <footer>
+    <p>© 2025 Bearplane by Matthew Burton. 無断転載禁止。</p>
+  </footer>
 
   <div class="lightbox-overlay" id="lightbox">
     <img src="" alt="拡大画像" id="lightbox-img">
@@ -205,10 +258,15 @@
   <script>
     const lightbox = document.getElementById("lightbox");
     const lightboxImg = document.getElementById("lightbox-img");
-    document.querySelectorAll(".atomic-images img").forEach(img => img.addEventListener("click", () => {
-      lightboxImg.src = img.src;
-      lightbox.style.display = "flex";
-    }));
+    document.querySelectorAll(
+      ".atomic-images img, .wojtek-images img, .dev-images img, .music-images img"
+    ).forEach(img => {
+      if (img.closest("a")) return;
+      img.addEventListener("click", () => {
+        lightboxImg.src = img.src;
+        lightbox.style.display = "flex";
+      });
+    });
     lightbox.addEventListener("click", () => {
       lightbox.style.display = "none";
       lightboxImg.src = "";
@@ -217,4 +275,3 @@
 
 </body>
 </html>
-
