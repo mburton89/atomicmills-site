@@ -26,6 +26,33 @@
     html, body { margin: 0; padding: 0; width: 100%; overflow-x: hidden; }
     .hero-gif { width: 100%; max-width: 800px; margin: 0 auto; display: block; }
     @media (max-aspect-ratio: 50/49) { .hero-gif { width:100vw; max-width:none; margin:0; } }
+
+    .trailer-button {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      background-color: darkred;
+      color: white;
+      padding: 15px 40px;
+      font-weight: bold;
+      font-size: 1.4em;
+      text-decoration: none;
+      border-radius: 8px;
+      transition: background-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+      gap: 10px;
+    }
+
+    .btn:hover {
+      background-color: #a00;
+      transform: scale(1.05);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    }
+
     .store-buttons { display: flex; justify-content: center; gap: 10px; margin-top: 20px; flex-wrap: wrap; }
     .store-buttons img { height: 76px; max-width: 262px; object-fit: contain; transition: transform .2s, box-shadow .2s; }
     .store-buttons img:hover { transform: scale(1.05); box-shadow: 0 4px 12px rgba(0,0,0,0.2); }
@@ -50,6 +77,11 @@
   <img src="/images/main-12.gif" alt="Logotipo Bearplane" class="hero-gif">
 
   <div class="section">
+
+    <div class="trailer-button">
+      <a href="https://youtu.be/xTnLBbqckjc" class="btn" target="_blank">▶ Assistir ao trailer</a>
+    </div>
+
     <p class="intro-paragraph">
       <em><strong>Voe como um urso movido a foguetes em <em>Bearplane</em>: uma aventura cheia de ação e humor, inspirada livremente na incrível história de Wojtek, o urso da Segunda Guerra Mundial. Enfrente inimigos com habilidades insanas, lanches nucleares e muito caos aéreo.</strong></em>
     </p>
@@ -273,3 +305,17 @@
   </script>
 </body>
 </html>
+
+
+
+<!-- SEGREDOS DO BEARPLANE!
+
+ - Toque/clique nas cabeças no menu de créditos para desbloquear vários Atomic Snacks!
+ - Use o impulso ao máximo nos primeiros 10 segundos para desbloquear um chapéu super veloz
+ - Morra sem eliminar ninguém para uma surpresa estranha
+ - Acerte 5 rebatidas consecutivas com o taco de beisebol para ouvir o melhor som de torcida do mundo
+ - Alcance 50.000 eliminações e depois jogue em francês para desbloquear um chapéu ardente e delicioso
+ - Consiga 3.000 eliminações no Modo Infinito para ver o final verdadeiro
+
+Obrigado por jogar!
+– Matt -->

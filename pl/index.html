@@ -26,6 +26,33 @@
     html, body { margin: 0; padding: 0; width: 100%; overflow-x: hidden; }
     .hero-gif { width: 100%; max-width: 800px; margin: 0 auto; display: block; }
     @media (max-aspect-ratio: 50/49) { .hero-gif { width:100vw; max-width:none; margin:0; } }
+
+    .trailer-button {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      background-color: darkred;
+      color: white;
+      padding: 15px 40px;
+      font-weight: bold;
+      font-size: 1.4em;
+      text-decoration: none;
+      border-radius: 8px;
+      transition: background-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+      gap: 10px;
+    }
+
+    .btn:hover {
+      background-color: #a00;
+      transform: scale(1.05);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    }
+
     .store-buttons { display: flex; justify-content: center; gap: 10px; margin-top:20px; flex-wrap: wrap; }
     .store-buttons img { height: 76px; max-width:262px; object-fit: contain; transition: transform .2s, box-shadow .2s; }
     .store-buttons img:hover { transform: scale(1.05); box-shadow: 0 4px 12px rgba(0,0,0,0.2); }
@@ -50,6 +77,11 @@
   <img src="/images/main-12.gif" alt="Logo Bearplane" class="hero-gif">
 
   <div class="section">
+
+    <div class="trailer-button">
+      <a href="https://youtu.be/xTnLBbqckjc" class="btn" target="_blank">▶ Obejrzyj zwiastun</a>
+    </div>
+
     <p class="intro-paragraph">
       <em><strong>Wzbogać się w przestworza jako rakietowy miś w <em>Bearplane</em>: pełnej akcji i humoru przygodzie luźno inspirowanej legendą o wojennym niedźwiedziu Wojtku. Pokonuj przebiegłych wrogów szalonymi umiejętnościami, pochłaniaj nuklearne przekąski i rządź niebem.</strong></em>
     </p>
@@ -274,3 +306,17 @@
 </body>
 </html>
 ```
+
+
+
+<!-- SEKRETY BEARPLANE!
+
+ - Kliknij/głoś głowy w menu napisów, aby odblokować masę Atomowych Przekąsek!
+ - Przyspieszaj maksymalnie przez pierwsze 10 sekund, aby zdobyć szalony, szybki kapelusz
+ - Zgiń bez zabicia wrogów, a czeka cię dziwna niespodzianka
+ - Wykonaj 5 udanych trafień kijem baseballowym z rzędu, aby usłyszeć najlepszy dźwięk wiwatu na świecie
+ - Zdobądź 50 000 zabójstw i zagraj w języku francuskim, aby odblokować ognisty i pyszny kapelusz
+ - Zdobądź 3 000 zabójstw w trybie nieskończonym, aby zobaczyć ostateczne zakończenie
+
+Dzięki za grę!
+– Matt -->

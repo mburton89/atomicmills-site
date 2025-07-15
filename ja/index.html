@@ -25,6 +25,33 @@
     a { color: darkred; text-decoration: underline; font-weight: bold; }
     html, body { margin: 0; padding: 0; width: 100%; overflow-x: hidden; }
     .hero-gif { width: 100%; max-width: 800px; margin: 0 auto; display: block; }
+
+    .trailer-button {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      background-color: darkred;
+      color: white;
+      padding: 15px 40px;
+      font-weight: bold;
+      font-size: 1.4em;
+      text-decoration: none;
+      border-radius: 8px;
+      transition: background-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+      gap: 10px;
+    }
+
+    .btn:hover {
+      background-color: #a00;
+      transform: scale(1.05);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    }
+
     @media (max-aspect-ratio: 50/49) { .hero-gif { width:100vw; max-width:none; margin:0; } }
     .store-buttons { display: flex; justify-content: center; gap: 10px; margin-top: 20px; flex-wrap: wrap; }
     .store-buttons img { height: 76px; max-width: 262px; object-fit: contain; transition: transform .2s, box-shadow .2s; }
@@ -50,6 +77,11 @@
   <img src="/images/main-12.gif" alt="Bearplane ロゴ" class="hero-gif">
 
   <div class="section">
+
+    <div class="trailer-button">
+      <a href="https://youtu.be/xTnLBbqckjc" class="btn" target="_blank">▶ トレーラーを見る</a>
+    </div>
+
     <p class="intro-paragraph">
       <em><strong>ロケットパワーのクマとして空を駆ける『Bearplane』は、第二次世界大戦の伝説のクマ・ヴォイテクの物語にゆるく着想を得た、ユーモアとアクション満載の冒険です。奇想天外な能力、核融合スナック、混沌の空戦をお楽しみください。</strong></em>
     </p>
@@ -275,3 +307,17 @@
 
 </body>
 </html>
+
+
+
+<!-- ベアプレーンの秘密！
+
+ - クレジットメニューの頭をタップ/クリックすると、たくさんのアトミックスナックがアンロックされるよ！
+ - 最初の10秒でできるだけ多くブーストすると、超高速の帽子が手に入る
+ - 敵を倒さずに死ぬと、奇妙なサプライズが…！
+ - 野球バットで5回連続ヒットすると、世界一の歓声SEが流れる
+ - 合計で50,000キル達成後、フランス語でプレイすると、燃える美味しい帽子がアンロックされる
+ - エンドレスモードで3,000キルすると、真のエンディングが見られる
+
+プレイしてくれてありがとう！
+– Matt -->

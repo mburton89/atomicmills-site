@@ -28,6 +28,33 @@
     @media (max-aspect-ratio: 50/49) {
       .hero-gif { width: 100vw; max-width: none; margin: 0; }
     }
+
+    .trailer-button {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      background-color: darkred;
+      color: white;
+      padding: 15px 40px;
+      font-weight: bold;
+      font-size: 1.4em;
+      text-decoration: none;
+      border-radius: 8px;
+      transition: background-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+      gap: 10px;
+    }
+
+    .btn:hover {
+      background-color: #a00;
+      transform: scale(1.05);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    }
+
     .store-buttons { display: flex; justify-content: center; gap: 10px; margin-top: 20px; flex-wrap: wrap; }
     .store-buttons img { height: 76px; max-width: 262px; object-fit: contain; transition: transform 0.2s ease, box-shadow 0.2s ease; }
     .store-buttons img:hover { transform: scale(1.05); box-shadow: 0 4px 12px rgba(0,0,0,0.2); }
@@ -52,6 +79,11 @@
   <img src="/images/main-12.gif" alt="Logo Bearplane" class="hero-gif">
 
   <div class="section">
+
+    <div class="trailer-button">
+      <a href="https://youtu.be/xTnLBbqckjc" class="btn" target="_blank">▶ Ver el tráiler</a>
+    </div>
+
     <p class="intro-paragraph">
       <em><strong>Embárcate en los cielos como un oso propulsado por cohetes en <em>Bearplane</em>: una aventura llena de acción y humor, inspirada libremente en la épica historia de Wojtek, el oso de la Segunda Guerra Mundial. Enfréntate a enemigos con habilidades disparatadas, bocadillos nucleares y un caos aéreo descontrolado.</strong></em>
     </p>
@@ -276,3 +308,16 @@
 
 </body>
 </html>
+
+
+<!-- ¡SECRETOS DE BEARPLANE!
+
+ - Toca/haz clic en las cabezas en el menú de créditos para desbloquear un montón de Atomic Snacks
+ - Usa el turbo tanto como puedas en los primeros 10 segundos para desbloquear un sombrero rapidísimo
+ - Muere sin conseguir bajas para una sorpresa extraña
+ - Consigue 5 golpes consecutivos con el bate de béisbol para escuchar el mejor sonido de ovación del mundo
+ - Consigue 50,000 bajas en total y luego juega en francés para desbloquear un sombrero ardiente y delicioso
+ - Consigue 3,000 bajas en el modo infinito para ver el final definitivo
+
+¡Gracias por jugar!
+– Matt -->

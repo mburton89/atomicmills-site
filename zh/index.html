@@ -26,6 +26,33 @@
     html, body { margin: 0; padding: 0; width: 100%; overflow-x: hidden; }
     .hero-gif { width: 100%; max-width: 800px; margin: 0 auto; display: block; }
     @media (max-aspect-ratio: 50/49) { .hero-gif { width:100vw; max-width:none; margin:0; } }
+
+    .trailer-button {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      background-color: darkred;
+      color: white;
+      padding: 15px 40px;
+      font-weight: bold;
+      font-size: 1.4em;
+      text-decoration: none;
+      border-radius: 8px;
+      transition: background-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+      gap: 10px;
+    }
+
+    .btn:hover {
+      background-color: #a00;
+      transform: scale(1.05);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    }
+
     .store-buttons { display: flex; justify-content: center; gap: 10px; margin-top:20px; flex-wrap: wrap; }
     .store-buttons img { height: 76px; max-width:262px; object-fit: contain; transition: transform .2s, box-shadow .2s; }
     .store-buttons img:hover { transform: scale(1.05); box-shadow: 0 4px 12px rgba(0,0,0,0.2); }
@@ -50,6 +77,11 @@
   <img src="/images/main-12.gif" alt="Bearplane 标志" class="hero-gif">
 
   <div class="section">
+
+    <div class="trailer-button">
+      <a href="https://youtu.be/xTnLBbqckjc" class="btn" target="_blank">▶ 观看预告片</a>
+    </div>
+
     <p class="intro-paragraph">
       <em><strong>驾驶您的火箭熊驰骋天空，在 <em>Bearplane</em> 中展开一场充满幽默与动作的冒险，灵感源自传奇二战军熊沃伊泰克的真实故事。使用疯狂技能对抗敌人，享用核能小吃，体验极致空战混乱。</strong></em>
     </p>
@@ -273,4 +305,43 @@
   </script>
 </body>
 </html>
+
+
+
+<!-- BEARPLANE 秘密！
+
+ - 点击/轻触“制作人员”菜单中的头像可解锁大量原子小吃！
+ - 在前10秒内尽可能多地加速，以解锁一顶超级快的帽子
+ - 没有击杀任何敌人就死亡会触发一个奇怪的惊喜
+ - 连续用棒球击中5次可听到世界上最棒的欢呼音效
+ - 累积击杀达到50,000后，切换到法语游戏语言将解锁一顶火辣美味的帽子
+ - 在无尽模式中击杀3,000个敌人可触发最终结局
+
+感谢游玩！
+– Matt -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
