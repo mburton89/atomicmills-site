@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>B.E.A.R. - Bear Essentials Athletic Recorder</title>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <style>
+    body {
+      background-color: black;
+      color: #FFBF00;
+      font-family: 'Courier New', Courier, 'Lucida Console', Monaco, monospace;
+      max-width: 700px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    h1, h2 {
+      text-align: center;
+    }
+
+    label {
+      display: block;
+      margin-top: 10px;
+    }
+
+    input[type="number"], input[type="date"] {
+      background-color: black;
+      color: #FFBF00;
+      border: 1px solid #FFBF00;
+      font-family: inherit;
+      font-size: 1em;
+      padding: 4px 6px;
+      width: 100px;
+    }
+
+    button {
+      background-color: black;
+      color: #FFBF00;
+      border: 1px solid #FFBF00;
+      margin-top: 20px;
+      padding: 10px 20px;
+      font-weight: bold;
+      cursor: pointer;
+      font-family: inherit;
+    }
+
+    button:hover {
+      background-color: #222;
+    }
+
+    canvas {
+      background-color: #111;
+      border: 1px solid #FFBF00;
+      margin-top: 40px;
+    }
+
+    .run-time {
+      display: flex;
+      gap: 10px;
+      align-items: center;
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+  <h1>🐻 B.E.A.R.</h1>
+  <h2>Bear Essentials Athletic Recorder</h2>
+
+  <label for="date">Week Ending:</label>
+  <input type="date" id="date">
+
+  <label>Deadlift (lbs):</label>
+  <input type="number" id="deadlift">
+
+  <label>Dumbbell Press (lbs):</label>
+  <input type="number" id="dumbbell">
+
+  <label>Pull-ups (lbs added or bodyweight):</label>
+  <input type="number" id="pullups">
+
+  <label>Incline Bench Press (lbs):</label>
+  <input type="number" id="incline">
+
+  <label>Squats (lbs):</label>
+  <input type="number" id="squats">
+
+  <label>Dips (lbs added or bodyweight):</label>
+  <input type="number" id="dips">
+
+  <label>1-Mile Run:</label>
+  <div class="run-time">
+    <input type="number" id="runMin" placeholder="Minutes">
+    <input type="number" id="runSec" placeholder="Seconds">
+  </div>
+
+  <button onclick="saveEntry()">Save Entry</button>
+
+  <canvas id="progressChart" width="600" height="400"></canvas>
+
+  <script>
+    const storageKey = "bearTrackerData";
+
+    function saveEntry() {
+      const date = document.getElementById("date").value;
+      if (!date) {
+        alert("Please enter a date.");
+        return;
+      }
+
+      const entry = {
+        date,
+        deadlift: +document.getElementById("deadlift").value,
+        dumbbell: +document.getElementById("dumbbell").value,
+        pullups: +document.getElementById("pullups").value,
+        incline: +document.getElementById("incline").value,
+        squats: +document.getElementById("squats").value,
+        dips: +document.getElementById("dips").value,
+        runTime: convertToSeconds(
+          +document.getElementById("runMin").value,
+          +document.getElementById("runSec").value
+        )
+      };
+
+      const data = JSON.parse(localStorage.getItem(storageKey) || "[]");
+      data.push(entry);
+      localStorage.setItem(storageKey, JSON.stringify(data));
+      renderChart(data);
+    }
+
+    function convertToSeconds(min, sec) {
+      return min * 60 + sec;
+    }
+
+    function convertToMinSec(seconds) {
+      const m = Math.floor(seconds / 60);
+      const s = seconds % 60;
+      return `${m}:${s.toString().padStart(2, '0')}`;
+    }
+
+    function renderChart(data) {
+      const sorted = [...data].sort((a, b) => new Date(a.date) - new Date(b.date));
+      const labels = sorted.map(entry => entry.date);
+
+      const datasets = [
+        {
+          label: "Deadlift",
+          data: sorted.map(e => e.deadlift),
+          borderColor: "red",
+          fill: false
+        },
+        {
+          label: "Dumbbell Press",
+          data: sorted.map(e => e.dumbbell),
+          borderColor: "orange",
+          fill: false
+        },
+        {
+          label: "Pull-ups",
+          data: sorted.map(e => e.pullups),
+          borderColor: "green",
+          fill: false
+        },
+        {
+          label: "Incline Bench",
+          data: sorted.map(e => e.incline),
+          borderColor: "cyan",
+          fill: false
+        },
+        {
+          label: "Squats",
+          data: sorted.map(e => e.squats),
+          borderColor: "purple",
+          fill: false
+        },
+        {
+          label: "Dips",
+          data: sorted.map(e => e.dips),
+          borderColor: "magenta",
+          fill: false
+        },
+        {
+          label: "1-Mile Run (seconds)",
+          data: sorted.map(e => e.runTime),
+          borderColor: "yellow",
+          fill: false
+        }
+      ];
+
+      if (window.chartInstance) {
+        window.chartInstance.destroy();
+      }
+
+      const ctx = document.getElementById("progressChart").getContext("2d");
+      window.chartInstance = new Chart(ctx, {
+        type: "line",
+        data: {
+          labels,
+          datasets
+        },
+        options: {
+          responsive: true,
+          scales: {
+            y: {
+              beginAtZero: false,
+              title: {
+                display: true,
+                text: 'Pounds / Time in Seconds',
+                color: '#FFBF00'
+              },
+              ticks: {
+                color: '#FFBF00'
+              },
+              grid: {
+                color: '#333'
+              }
+            },
+            x: {
+              ticks: {
+                color: '#FFBF00'
+              },
+              grid: {
+                color: '#333'
+              }
+            }
+          },
+          plugins: {
+            legend: {
+              labels: {
+                color: '#FFBF00'
+              }
+            }
+          }
+        }
+      });
+    }
+
+    window.onload = () => {
+      const stored = JSON.parse(localStorage.getItem(storageKey) || "[]");
+      if (stored.length > 0) renderChart(stored);
+    };
+  </script>
+</body>
+</html>
