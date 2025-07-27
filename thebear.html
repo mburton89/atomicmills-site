@@ -157,6 +157,40 @@
       color: #BF9C44;
     }
 
+    /* How to Use section */
+    .how-to-use {
+      text-align: center;
+      color: #FFD85B;
+      margin: 20px 0;
+      font-size: 1em;
+    }
+    .how-to-use h2 {
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+    .how-to-use ul {
+      list-style: none;
+      padding: 0;
+    }
+    .how-to-use ul li {
+      text-align: left;
+      max-width: 700px;
+      margin: 5px auto;
+    }
+    .how-to-use ul ul {
+      margin-left: 20px;
+    }
+
+    /* How-to-use link styling */
+    .how-to-use a {
+      color: #FFD85B;
+      text-decoration: underline;
+      font-weight: bold;
+    }
+    .how-to-use a:hover {
+      color: #BF9C44;
+    }
+
 </style>
 </head>
 <body>
@@ -208,6 +242,22 @@
     <div style="text-align:center; margin-top:20px;">
       <button id="clearBtn">CLEAR ALL DATA</button>
     </div>
+  </div>
+
+  <!-- How to Use section -->
+  <div class="how-to-use">
+    <h2>HOW TO USE THE B.E.A.R.</h2>
+    <ul>
+      <li>• The B.E.A.R. program consists of your 7‑rep max across 7 exercises.</li>
+      <li>• Select an exercise, enter your 7‑rep max weight (or run time).
+        <ul>
+          <li>• (Optional) choose the date if recording a previous entry.</li>
+        </ul>
+      </li>
+      <li>• Click <strong>SAVE ENTRY</strong> to store your result and update the graph.</li>
+      <li>• Your B.E.A.R. Score is calculated automatically: (sum of latest lifts multiplied by mile-run speed in mph).</li>
+      <li>• And don't forget to fuel up on Nukey Nectar, Honey Thunder Cola, and Flappy Flakes in <a href="https://atomicmills.com/bearplane.html" target="_blank">Bearplane</a> before your workouts.</li>
+    </ul>
   </div>
 
   <!-- Atomic Mills Logo Footer outside container -->
@@ -314,7 +364,7 @@
           responsive:true, scales:{ y:{ ticks:{ color:'#FFD85B' }, grid:{ color:'#7F692D' } }, x:{ ticks:{ color:'#FFD85B' }, grid:{ color:'#7F692D' } } },
           plugins:{ legend:{ labels:{ color:'#FFD85B' } } }, interaction:{ mode:'nearest', intersect:true }
         }
-      }); 
+      });
     }
 
     window.onload = () => { dateIn.value = dateIn.value || getToday(); exSel.dispatchEvent(new Event('change')); };
